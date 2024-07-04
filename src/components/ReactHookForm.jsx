@@ -1,8 +1,9 @@
 import "../App.css";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
-
+let renderCount = 0;
 const ReactHookForm = () => {
+  renderCount++;
   const form = useForm();
   const { register, control, handleSubmit, formState, reset } = form;
   const { errors } = formState;
@@ -60,6 +61,7 @@ const ReactHookForm = () => {
         </button>
       </form>
       <DevTool control={control} />
+      <p>RenderCount = {renderCount/2}</p>
     </>
   );
 };

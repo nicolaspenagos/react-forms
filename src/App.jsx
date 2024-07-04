@@ -7,7 +7,7 @@ function App() {
     <>
       <h1>React Forms</h1>
       <MyForm />
-      {/* <ReactHookForm /> */}
+      <ReactHookForm />
     </>
   );
 }
